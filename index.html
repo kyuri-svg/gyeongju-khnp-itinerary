@@ -231,6 +231,16 @@
     color: var(--ink);
   }
   .t-box.t-critical h4 { color: var(--warn); }
+  .t-alert-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .t-alert-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 700;
+    color: #ffffff;
+    background: var(--warn);
+    padding: 5px 10px;
+    border-radius: 999px;
+    line-height: 1.3;
+  }
   .t-link { margin-top: 8px; }
   .t-link a {
     font-size: 12px;
@@ -520,10 +530,12 @@
       </div></div>
           
           <div class="t-box t-critical"><h4>출입 절차 및 보안사항</h4>
+      <div class="t-alert-row">
+        <span class="t-alert-badge">📵 노트북 반입 불가</span>
+        <span class="t-alert-badge">📷 휴대폰 카메라 스티커 부착 필수</span>
+      </div>
       <ul>
         <li>본사 입구에서 출입 절차 진행</li>
-        <li>휴대폰: 카메라 스티커 부착 필수</li>
-        <li>노트북: 반입 불가</li>
         <li>신분증 지참 필수</li>
       </ul></div>
           
