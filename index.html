@@ -113,7 +113,9 @@
     margin: 14px 0 0;
     padding: 10px 14px;
     background: var(--power-soft);
+    border: 1px solid var(--power);
     border-left: 3px solid var(--power);
+    border-radius: 8px;
     color: var(--ink);
     font-size: 13px;
     line-height: 1.55;
@@ -130,12 +132,15 @@
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
     color: var(--muted); font-weight: 500; margin: 0 0 10px;
   }
-  .attendees { display: flex; flex-direction: column; gap: 2px; }
+  .attendees { display: flex; flex-direction: column; gap: 8px; }
   .attendee {
     display: flex; align-items: center; justify-content: space-between;
     gap: 10px;
-    padding: 9px 0 9px 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
     border-left: 3px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
     color: var(--ink);
   }
   .attendee-rail { border-left-color: var(--rail); }
@@ -204,8 +209,16 @@
   .t-title { font-weight: 700; font-size: 15px; margin: 0 0 4px; text-wrap: balance; }
   .t-sub { font-weight: 400; color: var(--muted); font-size: 13px; }
   .t-meta { font-size: 13px; color: var(--muted); line-height: 1.5; }
-  .t-info-block { display: flex; flex-direction: column; gap: 3px; margin-top: 6px; }
-  .t-info-row { display: flex; gap: 10px; padding: 3px 0 3px 10px; border-left: 2px solid var(--line); }
+  .t-info-block {
+    display: flex; flex-direction: column;
+    margin-top: 8px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .t-info-row { display: flex; gap: 10px; padding: 8px 12px; }
+  .t-info-row + .t-info-row { border-top: 1px solid var(--line); }
   .t-info-label {
     flex: none; width: 58px;
     font-family: "Signal Mono", ui-monospace, monospace;
@@ -233,9 +246,10 @@
   }
   .t-box {
     margin-top: 10px;
+    border: 1px solid var(--line);
     border-left: 3px solid var(--power);
-    background: var(--power-soft);
-    border-radius: 0 8px 8px 0;
+    background: var(--surface);
+    border-radius: 8px;
     padding: 10px 14px;
     font-size: 13px;
     color: var(--ink);
@@ -261,7 +275,8 @@
     border: 1px solid var(--line);
   }
   .t-box.t-critical {
-    border-left-color: var(--warn);
+    border-color: var(--warn);
+    border-left-width: 3px;
     background: var(--warn-soft);
     color: var(--ink);
   }
